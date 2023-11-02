@@ -1,5 +1,5 @@
 import React from "react";
-import Notifications from "../components/notification";
+import Notifications from "../components/Notification";
 import bell from "../assets/icons/bell.svg";
 
 const SectionOne = () => {
