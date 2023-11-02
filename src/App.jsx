@@ -4,6 +4,7 @@ import { Toaster, toast } from "react-hot-toast";
 import SectionOne from "./Sections/SectionOne";
 import SectionTwo from "./Sections/SectionTwo";
 import SectionThree from "./Sections/SectionThree";
+import { SignUpForm } from "./constants";
 
 function App() {
   const handleEmailSubmit = () => {
@@ -45,7 +46,7 @@ function App() {
           <div className="max-lg:text-center flex flex-col items-center lg:fixed lg:top-[30vh]">
             <div className="w-[300px] mb-[24px] lg:w-[340px]">
               <h1 className="text-[39px] font-medium leading-[46.8px] text-grey-300 mb-8">
-                Sign up for exclusive access.
+                {SignUpForm.cta}
               </h1>
               <input
                 type="text"
@@ -57,12 +58,12 @@ function App() {
                 onClick={handleEmailSubmit}
                 className="bg-grey-900 rounded-[8px] w-full px-7 py-[18px] text-white text-base font-semibold leading-[19.2px]"
               >
-                Get started
+                {SignUpForm.btnText}
               </button>
             </div>
             <div className="py-[18px]">
               <p className="text-base font-semibold leading-[19.2px] text-grey-900">
-                You'll receive an email with an invite link to join.
+                {SignUpForm.message}
               </p>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import eye from "../assets/icons/eye.svg";
 import cohort from "../assets/images/cohorts.png";
+import { SectionTwoDetails } from "../constants";
 
 const SectionTwo = () => {
   return (
@@ -15,11 +16,10 @@ const SectionTwo = () => {
       <div className="flex flex-col gap-4  lg:text-right md:w-[500px] lg:w-[305px] lg:items-end pt-[17px]  max-lg:px-8">
         <img src={eye} alt="eye" className="w-8" />
         <h1 className="text-[31px] font-medium leading-[37.2px] drop-shadow-text">
-          Watch what the whales are doing
+          {SectionTwoDetails.title}
         </h1>
         <p className="text-base font-medium leading-[19.2px]  opacity-[0.7]">
-          All whales are not equal. Know exactly what the whales impacting YOUR
-          portfolio are doing.
+          {SectionTwoDetails.message}
         </p>
       </div>
     </section>
