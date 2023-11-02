@@ -4,14 +4,36 @@ import cohort from "./assets/images/cohorts.png";
 import logo from "./assets/icons/logo.svg";
 import Notifications from "./components/notification";
 import Testimonials from "./components/Testimonials";
+import validator from "validator";
+import { Toaster, toast } from "react-hot-toast";
 
 function App() {
+  const handleEmailSubmit = () => {
+    console.log("clicked");
+    const emailInput = document.getElementById("emailInput");
+    const email = emailInput.value;
+
+    if (validator.isEmail(email)) {
+      window.location.href = "https://app.loch.one/welcome";
+    } else {
+      toast.error("Please enter a valid email", {
+        duration: 3000,
+        position: "top-right",
+        style: {
+          background: "red",
+          color: "white",
+        },
+      });
+    }
+  };
+
   return (
     <>
-      <article className="flex  bg-black font-inter overflow-hidden">
-        <div className="w-[60vw] bg-gradient bg-no-repeat bg-cover text-primary-100 py-8 pl-[62px] ">
+      <article className="flex  bg-black font-inter">
+        <Toaster />
+        <div className="w-[60vw] bg-gradient bg-no-repeat bg-cover text-primary-100 py-8 pl-[62px] overflow-hidden ">
           {/* First Section */}
-          <section className="flex h-[304px] mb-[61px]">
+          <section className="flex h-[304px] mb-[61px] justify-between">
             <div className="flex flex-col gap-4">
               <img src={bell} alt="Bell_icon" className="w-8" />
               <h1 className="w-[313px] text-[31px] font-medium leading-[37.2px] drop-shadow-text">
@@ -67,16 +89,31 @@ function App() {
           </section>
         </div>
         {/* Right section - sign up */}
-        <div className="bg-white font-inter w-[640px]">
-          <div className="w-[326px]">
-            <h1 className="text-[39px] font-medium leading-[46.8px] text-grey-300">
-              Sign up for exclusive access.
-            </h1>
-            <input type="text" placeholder="Your email address" />
-            <button>Get started</button>
+        <div className="bg-white font-inter w-[40vw] flex justify-center">
+          <div className="fixed top-[30vh] flex flex-col items-center">
+            <div className="w-[340px] mb-[24px]">
+              <h1 className="text-[39px] font-medium leading-[46.8px] text-grey-300 mb-8">
+                Sign up for exclusive access.
+              </h1>
+              <input
+                type="text"
+                id="emailInput"
+                placeholder="Your email address"
+                className="px-6 py-5 rounded-[8px] border-[#E5E5E6] border-[1px] w-full mb-6 hover:border-black"
+              />
+              <button
+                onClick={handleEmailSubmit}
+                className="bg-grey-900 rounded-[8px] w-full px-7 py-[18px] text-white text-base font-semibold leading-[19.2px]"
+              >
+                Get started
+              </button>
+            </div>
+            <div className="py-[18px]">
+              <p className="text-base font-semibold leading-[19.2px] text-grey-900">
+                You'll receive an email with an invite link to join.
+              </p>
+            </div>
           </div>
-
-          <p>You'll receive an email with an invite link to join.</p>
         </div>
       </article>
     </>

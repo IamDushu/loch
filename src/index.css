@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+article {
+  min-height: 100vh;
+}
+
 .slider {
   overflow: hidden;
   position: relative;
