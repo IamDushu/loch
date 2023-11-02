@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-track {
+  display: flex;
+  gap: 14px;
+  width: calc(203.7px * 6);
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-203.7px * 3));
+  }
+}
+
+.slider::before,
+.slider::after {
+  content: " ";
+  position: absolute;
+  z-index: 2;
+}
+
+.slider::before {
+  background: linear-gradient(
+    to left,
+    transparent 0%,
+    rgba(0, 0, 0, 0.774) 100%
+  );
+
+  left: 0;
+  top: 0;
+  width: 25%;
+  height: 171.5px;
+}
+
+.slider::after {
+  background: linear-gradient(to right, transparent 0%, black 100%);
+  right: 0;
+  top: 0;
+  width: 25%;
+  height: 100%;
+}

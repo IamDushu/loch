@@ -2,11 +2,13 @@ import bell from "./assets/icons/bell.svg";
 import eye from "./assets/icons/eye.svg";
 import cohort from "./assets/images/cohorts.png";
 import logo from "./assets/icons/logo.svg";
+import Notifications from "./components/notification";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
     <>
-      <article className="flex  bg-black font-inter">
+      <article className="flex  bg-black font-inter overflow-hidden">
         <div className="w-[60vw] bg-gradient bg-no-repeat bg-cover text-primary-100 py-8 pl-[62px] ">
           {/* First Section */}
           <section className="flex h-[304px] mb-[61px]">
@@ -20,7 +22,11 @@ function App() {
                 on-chain or when a dormant whale you care about becomes active.
               </p>
             </div>
-            <div></div>
+            <div className="w-[407px] bg-linear slider">
+              <div className="slide-track">
+                <Notifications />
+              </div>
+            </div>
           </section>
           {/* Second Section */}
           <section className="flex h-[306px] pr-[62px] mb-[22px] justify-between">
@@ -43,21 +49,24 @@ function App() {
             </div>
           </section>
           {/* Third Section */}
-          <section>
+          <section className=" ">
             <div className="text-right pr-[62px] mb-[40px]">
               <h3 className="text-[25px] font-medium leading-[30px] mb-5">
                 Testimonials
               </h3>
               <hr className="border-t-[1px] border-[#E5E5E6] " />
             </div>
-            <div className="h-[136px] flex">
-              <div className="flex items-end">
+            <div className="h-[136px] w-fit flex gap-10 ">
+              <div className="flex items-end w-[60px]">
                 <img src={logo} alt="logo" className="w-[60px]" />
               </div>
-              <div></div>
+              <div className="">
+                <Testimonials />
+              </div>
             </div>
           </section>
         </div>
+        {/* Right section - sign up */}
         <div className="bg-white font-inter w-[640px]">
           <div className="w-[326px]">
             <h1 className="text-[39px] font-medium leading-[46.8px] text-grey-300">
