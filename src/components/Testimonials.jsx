@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <div className="flex gap-5 track">
+    <div className="flex max-md:flex-col gap-5">
       <motion.div
-        className="flex flex-col rounded-[12px] bg-white p-5 gap-5 w-[353px] h-[136px]"
+        className="flex flex-col rounded-[12px] bg-white p-5 gap-5 lg:w-[353px] lg:h-[136px]"
         drag
         dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
         dragElastic={1}
@@ -24,7 +24,7 @@ const Testimonials = () => {
         </p>
       </motion.div>
       <motion.div
-        className="flex flex-col rounded-[12px] bg-white p-5 gap-5 w-[353px]  h-[136px]"
+        className="flex flex-col rounded-[12px] bg-white p-5 gap-5 lg:w-[353px]  lg:h-[136px]"
         drag
         dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
         dragElastic={1}
@@ -43,7 +43,7 @@ const Testimonials = () => {
         </p>
       </motion.div>
       <motion.div
-        className="flex flex-col rounded-[12px] bg-white p-5 gap-5 w-[531px]  h-[136px]"
+        className="flex flex-col rounded-[12px] bg-white p-5 gap-5 lg:w-[531px]  lg:h-[136px]"
         drag
         dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
         dragElastic={1}

@@ -18,7 +18,7 @@ function App() {
     } else {
       toast.error("Please enter a valid email", {
         duration: 3000,
-        position: "top-right",
+        position: "top-center",
         style: {
           background: "red",
           color: "white",
@@ -29,37 +29,40 @@ function App() {
 
   return (
     <>
-      <article className="flex  bg-black font-inter">
+      <article className="lg:flex  bg-black font-inter">
         <Toaster />
-        <div className="w-[60vw] bg-gradient bg-no-repeat bg-cover text-primary-100 py-8 pl-[62px] overflow-hidden ">
+        <div className="bg-gradient bg-no-repeat bg-cover text-primary-100 py-8 lg:pl-[62px] overflow-hidden lg:w-[60vw]">
+          <div className="flex justify-center lg:hidden mb-10">
+            <img src={logo} alt="logo" className="w-[60px]" />
+          </div>
           {/* First Section */}
-          <section className="flex h-[304px] mb-[61px] justify-between">
-            <div className="flex flex-col gap-4">
+          <section className=" h-[304px] mb-[190px] lg:mb-[61px] lg:justify-between  lg:flex">
+            <div className="flex flex-col gap-4 max-md:px-8 max-md:mb-10">
               <img src={bell} alt="Bell_icon" className="w-8" />
-              <h1 className="w-[313px] text-[31px] font-medium leading-[37.2px] drop-shadow-text">
+              <h1 className="lg:w-[313px] text-[31px] font-medium leading-[37.2px] drop-shadow-text">
                 Get notified when a highly correlated whale makes a move
               </h1>
-              <p className="text-base font-medium leading-[19.2px] w-[322px] opacity-[0.7]">
+              <p className="text-base font-medium leading-[19.2px] lg:w-[322px] opacity-[0.7]">
                 Find out when a certain whale moves more than any preset amount
                 on-chain or when a dormant whale you care about becomes active.
               </p>
             </div>
-            <div className="w-[407px] bg-linear slider">
+            <div className="lg:w-[407px] bg-linear slider max-md:my-5">
               <div className="slide-track">
                 <Notifications />
               </div>
             </div>
           </section>
           {/* Second Section */}
-          <section className="flex h-[306px] pr-[62px] mb-[22px] justify-between">
-            <div className="border-[1.5px] border-primary-200 rounded-[13.5px]">
+          <section className="mb-20 lg:mb-[22px] lg:justify-between lg:flex lg:pr-[62px] lg:h-[306px] ">
+            <div className="max-md:mb-5 border-[1.5px] border-primary-200 rounded-[13.5px]">
               <img
                 src={cohort}
                 alt="cohorts"
-                className="w-[335px] h-[306px] rounded-[12px]"
+                className="lg:w-[335px] lg:h-[306px] w-full h-full rounded-[12px]"
               />
             </div>
-            <div className="flex flex-col gap-4 text-right w-[305px] items-end pt-[17px]">
+            <div className="flex flex-col gap-4  lg:text-right lg:w-[305px] lg:items-end pt-[17px]  max-md:px-8">
               <img src={eye} alt="eye" className="w-8" />
               <h1 className="text-[31px] font-medium leading-[37.2px] drop-shadow-text">
                 Watch what the whales are doing
@@ -71,27 +74,27 @@ function App() {
             </div>
           </section>
           {/* Third Section */}
-          <section className=" ">
-            <div className="text-right pr-[62px] mb-[40px]">
-              <h3 className="text-[25px] font-medium leading-[30px] mb-5">
+          <section className=" max-md:mx-5">
+            <div className="text-center lg:text-right lg:pr-[62px] mb-[40px]">
+              <h3 className="text-[25px] font-medium leading-[30px] mb-5 ">
                 Testimonials
               </h3>
               <hr className="border-t-[1px] border-[#E5E5E6] " />
             </div>
-            <div className="h-[136px] w-fit flex gap-10 ">
-              <div className="flex items-end w-[60px]">
+            <div className="lg:h-[136px] w-fit flex gap-10 ">
+              <div className="flex items-end w-[60px] max-md:hidden ">
                 <img src={logo} alt="logo" className="w-[60px]" />
               </div>
-              <div className="">
+              <div>
                 <Testimonials />
               </div>
             </div>
           </section>
         </div>
         {/* Right section - sign up */}
-        <div className="bg-white font-inter w-[40vw] flex justify-center">
-          <div className="fixed top-[30vh] flex flex-col items-center">
-            <div className="w-[340px] mb-[24px]">
+        <div className="bg-white max-md:py-10 font-inter flex justify-center lg:w-[40vw]">
+          <div className="max-md:text-center flex flex-col items-center lg:fixed lg:top-[30vh]">
+            <div className="w-[300px] mb-[24px] lg:w-[340px]">
               <h1 className="text-[39px] font-medium leading-[46.8px] text-grey-300 mb-8">
                 Sign up for exclusive access.
               </h1>
