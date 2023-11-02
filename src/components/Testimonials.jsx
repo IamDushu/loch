@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <div className="flex max-md:flex-col gap-5">
+    <div className="flex max-lg:flex-col gap-5">
       <motion.div
         className="flex flex-col rounded-[12px] bg-white p-5 gap-5 lg:w-[353px] lg:h-[136px]"
         drag
