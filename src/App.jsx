@@ -29,7 +29,7 @@ function App() {
       <article className="lg:flex  bg-black font-inter">
         <Toaster />
         {/* Left Section */}
-        <div className="bg-gradient bg-no-repeat bg-cover text-primary-100 py-8 lg:pl-[62px] overflow-hidden lg:w-[60vw]">
+        <div className="bg-gradient bg-no-repeat bg-cover text-primary-100 py-8 lg:pl-[60px] lg:pb-[60px] lg:pt-[44px] overflow-hidden lg:w-[60vw]">
           <div className="flex justify-center lg:hidden mb-10">
             <img src={logo} alt="logo" className="w-[60px]" />
           </div>
